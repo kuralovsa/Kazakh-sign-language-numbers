@@ -69,7 +69,7 @@ with open('model2.pkl', 'rb') as f:
     svm = pickle.load(f)
 
 import cv2 as cv
-
+numbersList = []
 cap = cv.VideoCapture(0)
 if not cap.isOpened():
     print("Cannot open camera")
@@ -104,12 +104,20 @@ while True:
     # Line thickness of 2 px
     thickness = 5
 
+    # Append numbers
+
+    numbersList.append(y_pred[0])
+    numbersList=list(set(numbersList))
+    # Set unique numbers
+    unique_numbers = list(set(numbersList))
+
     # Using cv2.putText() method
     frame = cv2.putText(frame, str(y_pred[0]), org, font,
                         fontScale, color, thickness, cv2.LINE_AA)
 
-    if str(y_pred[0]) == '1':
-        cv2.putText(frame, str(1), org2, font,
+    # realize that on frame
+    if len(numbersList)>3:
+        frame = cv2.putText(frame,str(unique_numbers[2])+ str(y_pred[0]), org2, font,
                             fontScale, color, thickness, cv2.LINE_AA)
 
     cv.imshow('frame', frame)
