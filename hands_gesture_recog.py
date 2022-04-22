@@ -116,9 +116,9 @@ while True:
                         fontScale, color, thickness, cv2.LINE_AA)
 
     # realize that on frame
-    if len(numbersList)>3:
-        frame = cv2.putText(frame,str(unique_numbers[2])+ str(y_pred[0]), org2, font,
-                            fontScale, color, thickness, cv2.LINE_AA)
+    # if len(numbersList)>3:
+    #     frame = cv2.putText(frame,str(unique_numbers[2])+ str(y_pred[0]), org2, font,
+    #                         fontScale, color, thickness, cv2.LINE_AA)
 
     cv.imshow('frame', frame)
 
