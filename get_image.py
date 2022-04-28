@@ -3,7 +3,8 @@ import cv2 as cv
 from pathlib import Path
 
 def get_image():
-    Class = 'iloveu'
+    Class = '' \
+            '10'
     Path('DATASET/'+Class).mkdir(parents=True, exist_ok=True)
     cap = cv.VideoCapture(0)
     if not cap.isOpened():
