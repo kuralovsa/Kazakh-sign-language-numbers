@@ -18,7 +18,7 @@ def image_processed(hand_img):
 
     # Initialize Hands
     hands = mp_hands.Hands(static_image_mode=True,
-                           max_num_hands=1, min_detection_confidence=0.7)
+                           max_num_hands=2, min_detection_confidence=0.7)
     mpDraw = mp.solutions.drawing_utils
 
     # Results
@@ -65,7 +65,7 @@ def image_processed(hand_img):
 import pickle
 
 # load model
-with open('model1020.pkl', 'rb') as f:
+with open('love.pkl', 'rb') as f:
     svm = pickle.load(f)
 
 import cv2 as cv

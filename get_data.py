@@ -1,6 +1,5 @@
 import cv2
 import mediapipe as mp
-import pandas as pd  
 import os
 import numpy as np 
 
@@ -21,7 +20,7 @@ def image_processed(file_path):
 
     # Initialize Hands
     hands = mp_hands.Hands(static_image_mode=True,
-    max_num_hands=1, min_detection_confidence=0.7)
+    max_num_hands=2, min_detection_confidence=0.5)
 
     # Results
     output = hands.process(img_flip)
@@ -43,6 +42,7 @@ def image_processed(file_path):
         for i in data:
             if i not in garbage:
                 without_garbage.append(i)
+                print(i)
 
         clean = []
 
@@ -61,7 +61,7 @@ def image_processed(file_path):
 def make_csv():
     
     mypath = 'dataset'
-    file_name = open('dataset.csv', 'a')
+    file_name = open('i love you.csv', 'a')
 
     for each_folder in os.listdir(mypath):
         if '._' in each_folder:
