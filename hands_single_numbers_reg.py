@@ -26,7 +26,6 @@ def image_processed(hand_img):
     result = hands.process(img_rgb)
 
     hands.close()
-
     try:
         data = output.multi_hand_landmarks[0]
 
