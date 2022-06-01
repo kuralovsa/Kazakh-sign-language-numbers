@@ -60,8 +60,8 @@ def image_processed(file_path):
 
 def make_csv():
     
-    mypath = 'dataset'
-    file_name = open('i love you.csv', 'a')
+    mypath = 'kazakh alphabet'
+    file_name = open('kazakh.csv', 'a')
 
     for each_folder in os.listdir(mypath):
         if '._' in each_folder:

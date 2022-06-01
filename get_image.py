@@ -4,7 +4,7 @@ from pathlib import Path
 
 def get_image():
     Class = '' \
-            'home'
+            'a`'
     Path('DATASET/' + Class).mkdir(parents=True, exist_ok=True)
     cap = cv.VideoCapture(0)
     if not cap.isOpened():

@@ -65,7 +65,7 @@ def image_processed(hand_img):
 import pickle
 
 # load model
-with open('model09.pkl', 'rb') as f:
+with open('love.pkl', 'rb') as f:
     svm = pickle.load(f)
 
 import cv2 as cv
